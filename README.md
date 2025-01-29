@@ -1,2 +1,33 @@
-# nextjs-qr-code-generator
-A simple Next.js web application that converts links into QR codes. Users can enter a URL, generate a QR code, and use it for easy sharing. The app is built using React (Next.js) and the qrcode.react library. Deployed on Netlify for fast and accessible hosting.
+# Next.js QR Code Generator
+
+A simple **Next.js** web application that converts links into QR codes. Users can enter a URL, generate a QR code, and use it for easy sharing.
+
+## 🚀 Features
+✅ Convert any URL into a QR Code  
+✅ Lightweight and responsive UI  
+✅ Built with Next.js for fast performance  
+✅ Deployable on Netlify with CI/CD integration  
+
+## 🛠 Tech Stack
+- **Frontend:** Next.js (React)
+- **QR Code Generation:** `qrcode.react`
+- **Deployment:** Netlify
+
+## 📌 Live Demo
+🔗 [Your Netlify Deployment Link Here](#)
+
+## 📥 Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/nextjs-qr-code-generator.git
+   cd nextjs-qr-code-generator
+
+2. **Install Dependencies:**
+   ```bash
+   npm install
+
+3. **Run Development Server:**
+   ```bash
+   npm run dev
+
