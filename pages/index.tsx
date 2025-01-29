@@ -8,7 +8,7 @@ export default function Home() {
   const qrRef = useRef(null); // Ref for QR Code Canvas
 
   // Function to validate URL
-  const isValidURL = (url) => {
+  const isValidURL = (url: string) => {
     const pattern = new RegExp(
       "^(https?:\\/\\/)?" + // Optional http or https
         "((([a-zA-Z\\d]([a-zA-Z\\d-]*[a-zA-Z\\d])*)\\.)+[a-zA-Z]{2,}|" + // Domain name
