@@ -5,7 +5,7 @@ export default function Home() {
   const [link, setLink] = useState("");
   const [qrValue, setQrValue] = useState("");
   const [error, setError] = useState("");
-  const qrRef = useRef(null); // Ref for QR Code Canvas
+  const qrRef = useRef<HTMLDivElement>(null);
 
   // Function to validate URL
   const isValidURL = (url: string) => {
@@ -44,18 +44,19 @@ export default function Home() {
 
   const downloadQRCode = () => {
     if (qrRef.current) {
-      const canvas = qrRef.current.querySelector("canvas");
-      const url = canvas.toDataURL("image/png");
-
-      // Create a temporary link and trigger download
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "qr_code.png";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      // Use type assertion to specify the type of element
+      const canvas = qrRef.current?.querySelector<HTMLCanvasElement>('canvas');
+      if (canvas) {
+        const url = canvas.toDataURL('image/png')
+        
+        // Create a temporary link and trigger download
+        const link = document.createElement('a')
+        link.download = 'qrcode.png'
+        link.href = url
+        link.click()
+      }
     }
-  };
+  }
 
   return (
     <div style={{ textAlign: "center", padding: "50px" }}>
@@ -87,8 +88,8 @@ export default function Home() {
       {qrValue && (
         <>
           <div ref={qrRef} style={{ marginTop: "20px" }}>
-            <QRCodeCanvas value={qrValue} size={256} />
-          </div>
+  <QRCodeCanvas value={qrValue} size={256} />
+</div>
           <br />
           <button
             onClick={downloadQRCode}
