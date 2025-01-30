@@ -28,7 +28,7 @@ export default function Home() {
     }
 
     if (!isValidURL(link)) {
-      setError("Invalid URL! Please enter a valid link.");
+      setError("Invalid URL! Please enter a valid link and try again !");
       return;
     }
 
