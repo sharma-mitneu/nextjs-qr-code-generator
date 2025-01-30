@@ -14,7 +14,7 @@ A simple **Next.js** web application that converts links into QR codes. Users ca
 - **Deployment:** Netlify
 
 ## 📌 Live Demo
-🔗 [Your Netlify Deployment Link Here](#)
+🔗 [Netlify Deployment Link Here](https://app-qr-generator.netlify.app)
 
 ## 📥 Installation & Setup
 
